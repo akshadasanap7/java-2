@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Bulb-toggler</title>
+     <style>
+        body{
+            background-color: rgba(205, 127, 236, 0.218);
+        }
+        .container{
+            margin: 20px auto;
+            width: 500px;
+            background-color: rgb(167, 118, 210);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #bulb{
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+        }
+        .center{
+            text-align: center;
+            color: white;
+        }
+        .btn{
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+              cursor: pointer;
+        }
+        .btncenter{
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn-on{
+            background-color: rgb(203, 143, 204);
+            color: white;
+        }
+        .btn-off{
+            background-color: rgb(213, 135, 200);
+            color: rgb(23, 8, 8);
+        }
+     </style>
+</head>
+<body id="body">
+    <div class="container" id="container">
+        <h1 class="center" id="center">Bulb-toggle</h1>
+        <img src="bulb.png" alt="bulb" id="bulb">
+ 
+        <div class="btncenter">
+            
+             <button class="btn btn-off" onclick="toggle(false)">OFF</button>
+             <button  class="btn btn-on" onclick="toggle(true)">ON</button>
+
+        </div>
+    </div>
+<script>
+   
+   function toggle (turnOn){
+    document.getElementById("bulb").src= turnOn
+    ? "idea.png"
+    : "bulb.png";
+    document.getElementById("body").style.backgroundColor = turnOn
+    ? "rgb(167, 118, 210)"
+    : "lightpurple";
+    document.getElementById("container").style.backgroundColor = turnOn
+    ? "#fff"
+    : " #ffff4d";
+     document.getElementById("center").style.color = turnOn
+     ? "#000"
+     : "#fff";
+
+   }
+</script>
+</body>
+</html>
